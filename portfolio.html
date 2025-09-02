@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio-styles.css">
+</head>
+
+<body>
+    <div class="about">
+        <button onclick="openWindow('aboutWindow')" title="Open About Me">
+            <img src="Pictures/folder.png" alt="About Me">
+        </button>
+        <h1>ABOUT ME</h1>
+    </div>
+
+    <div class="projects">
+        <button onclick="openWindow('projectsWindow')" title="Open Projects">
+            <img src="Pictures/folder.png" alt="Projects">
+        </button>
+        <h1>PROJECTS</h1>
+    </div>
+
+    <div class="experience">
+        <button onclick="openWindow('experienceWindow')" title="Open Experience">
+            <img src="Pictures/folder.png" alt="Experience">
+        </button>
+        <h1>EXPERIENCE</h1>
+    </div>
+
+    <div class="certs">
+        <button onclick="openWindow('certsWindow')" title="Open Certifications">
+            <img src="Pictures/folder.png" alt="Certifications">
+        </button>
+        <h1>CERTIFICATIONS</h1>
+    </div>
+
+    <div id="aboutWindow" class="mini-window">
+        <button class="close-btn" onclick="closeWindow('aboutWindow')">X</button>
+        <h2>About Me</h2>
+        <p>
+            Hi, my name is Jeremiah Torres! I have been passionate about Computer Engineering and Software Development from a young age.
+            I didn't pursue it until I did my time in the Army. I currently have
+            <a href="#certsWindow" onclick="openWindow('certsWindow')">Certifications</a>
+            showcasing my growing experience and dedication to securing a foothold in the technological field.
+        </p>
+    </div>
+
+    <div id="projectsWindow" class="mini-window">
+        <button class="close-btn" onclick="closeWindow('projectsWindow')">X</button>
+        <h2>Projects</h2>
+        <p>
+            <!-- Add project details here -->
+        </p>
+    </div>
+
+    <div id="experienceWindow" class="mini-window">
+        <button class="close-btn" onclick="closeWindow('experienceWindow')">X</button>
+        <h2>Experience</h2>
+        <p>
+            · US Army - 2020 to 2023
+            <br>    
+            - Worked as an 89B (Ammunition Specialist) handling, storing, and distributing ammunition and explosives.
+            <br>
+            - gained skills in communications, teamwork, and leadership. while also developing a strong work ethic and attention to detail.
+            <br>
+            <br>
+            · Medical Assistant - 2023 to Present
+            <br>
+            - Working as a Medical Assistant at a local clinic, where I assist with patient care  and perform administrative tasks.
+            <br>
+            - This role helped solidify my computer skills, as I frequently use electronic health records and other software to manage patient information.
+            <br>
+        </p>
+    </div>
+
+    <div id="certsWindow" class="mini-window">
+        <button class="close-btn" onclick="closeWindow('certsWindow')">X</button>
+        <h2>Certificates</h2>
+        <p>
+            <a href="pdf/Full-Stack-Cert.pdf" target="_blank">Full-Stack Certificate</a> - 2025
+            <br>
+            <a href="AWS-Cert.pdf" target="_blank">AWS Certified Cloud Practitioner</a> - 2025
+            <br>
+            <a href="Security-Cert.pdf" target="_blank">CompTIA Security+</a> - 2025
+            <br>
+        
+        </p>
+    </div>
+
+    <script>
+        function openWindow(windowId) {
+            document.getElementById(windowId).style.display = 'block';
+        }
+
+        function closeWindow(windowId) {
+            document.getElementById(windowId).style.display = 'none';
+        }
+
+        setInterval(() => {
+            const now = new Date();
+            const dateTimeElem = document.getElementById('date-time');
+            if (dateTimeElem) {
+                dateTimeElem.textContent = now.toLocaleString();
+            }
+        }, 1000);
+    </script>
+
+
+    <div id="taskbar">
+        <div></div> 
+        <div id="date-time"></div>
+    </div>
+
+</body>
+</html>

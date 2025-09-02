@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body{
+    line-height: 1.6;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Pictures/desktop.jpg);
+    background-size: stretch;
+    overflow: hidden;
+}
+
+.about, .projects, .experience, .certs {
+    width: 80%;
+    margin: 5px;
+    overflow: hidden;
+   
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1 {
+    color: white;
+    font-size: 1rem;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 8px; /* gives more "click area" */
+}
+button img {
+    display: block; /* removes weird spacing around image */
+    width: 64px; /* adjust size */
+    height: auto;
+}
+
+.mini-window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(200, 197, 197);
+    border: 2px solid black;
+    z-index: 1000;
+}
+
+#taskbar {
+    position: fixed;        
+    bottom: 0;          
+    right: 0;              
+    width: 100%;            
+    height: 35px;           
+    background-color: #222; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    padding: 0 10px;        
+    font-family: sans-serif;
+    font-size: 14px;
+    z-index: 1000;         
+}
+
+#date-time {
+    display: flex;
+}
+
+.mini-window {
+    display: none;
+}
+
+closeWindow {
+    position: absolute; 
+    top: 10px; 
+    right: 10px;
+}
